@@ -7,6 +7,7 @@ export default function handler(lambda) {
       .then((responseBody) => [200, responseBody])
       // On failure
       .catch((e) => {
+        console.log(e);
         return [500, { error: e.message }];
       })
       // Return HTTP response
